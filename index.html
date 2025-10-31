@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recolección de Datos Geológicos 🗺️</title>
+    <link rel="stylesheet" href="estilos/style.css"> 
+    <link rel="icon" href="imag/fosil.png" type="image/png">
+</head>
+<body>
+    <main class="container">
+        <h1>Registro de Datos Geológicos 🔬</h1>
+        
+        <section id="form-registro">
+            <h2>Registrar Nueva Muestra</h2>
+            <form id="formularioMuestra">
+                <div>
+                    <label for="numeroMuestra">Número de muestra:</label>
+                    <input type="text" id="numeroMuestra" required>
+                </div>
+                <div>
+                    <label for="localidad">Localidad:</label>
+                    <input type="text" id="localidad" required>
+                </div>
+                <div>
+                    <label for="pais">País:</label>
+                    <input type="text" id="pais" required>
+                </div>
+                <div>
+                    <label for="latitud">Latitud:</label>
+                    <input type="text" id="latitud" required>
+                </div>
+                <div>
+                    <label for="longitud">Longitud:</label>
+                    <input type="text" id="longitud" required>
+                </div>
+                <div>
+                    <label for="mineralogia">Mineralogía:</label>
+                    <input type="text" id="mineralogia" required>
+                </div>
+                <div>
+                    <label for="paleontologia">Paleontología:</label>
+                    <input type="text" id="paleontologia" required>
+                </div>
+                <button type="submit">Guardar Datos</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="lista-muestras">
+            <h2>Datos Guardados</h2>
+            <p id="mensaje-vacio" class="oculto">Aún no hay datos registrados.</p>
+            
+            <div class="tabla-responsive"> 
+                <table id="tabla-muestras" class="oculto">
+                    <thead>
+                        <tr>
+                            <th>Número de muestra</th>
+                            <th>Localidad</th>
+                            <th>País</th>
+                            <th>Latitud</th>
+                            <th>Longitud</th>
+                            <th>Mineralogía</th>
+                            <th>Paleontología</th>
+                            <th>Mapa</th> 
+                            <th>Acciones</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+            
+            <button id="exportarDatos" class="oculto">Exportar Datos (CSV)</button> 
+            <button id="limpiarDatos" class="oculto">Limpiar Todos los Datos</button>
+        </section>
+        
+        <hr>
+        
+        <section id="seccion-mapa">
+            <h2>Ver Coordenadas Manualmente</h2>
+            <p>Introduce una latitud y longitud para ir a Google Maps. (O usa el botón directo en la tabla)</p>
+            <form id="formularioMapa">
+                <div >
+                    <div style="flex-grow: 1;">
+                        <label for="mapLatitud">Latitud:</label>
+                        <input type="text" id="mapLatitud" required>
+                    </div>
+                    <div style="flex-grow: 1;">
+                        <label for="mapLongitud">Longitud:</label>
+                        <input type="text" id="mapLongitud" required>
+                    </div>
+                    <button type="submit" id="btnIrMapa">Ir a Google Maps 🌍</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
