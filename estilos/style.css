@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0; 
+    
+    
+    /* --- PROPIEDADES DE LA IMAGEN DE FONDO --- */
+    background-image: url('../imag/fondo-9.png'); 
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* --- FIN PROPIEDADES DE LA IMAGEN DE FONDO --- */
+}
+
+.container {
+    border: solid red 2px;
+   
+    margin-left: 5%;
+    margin-right: 5%;
+    color: rgb(240, 204, 149);
+    font-size: clamp(16px,3.5vw,32px);
+    font-family: "SUSE Mono", sans-serif;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    min-height: calc(100vh - 80px); 
+}
+
+h1 {
+    text-align: center;
+    color: rgb(240, 204, 149);
+    font-size: clamp(32px,8vw,64px);
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #1aba58;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    background-color: #f9f9f9; 
+}
+
+/* Estilos base para todos los botones */
+button {
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-right: 10px; 
+}
+
+button[type="submit"] {
+    
+    font-size: clamp(16px,3.5vw,32px);
+    background-color: #28a745;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+#exportarDatos {
+    background-color: #ffc107; 
+    font-size: clamp(16px,3.5vw,32px);
+    color: #333;
+}
+
+#exportarDatos:hover {
+    background-color: #e0a800;
+}
+
+#limpiarDatos {
+    background-color: #dc3545; 
+    font-size: clamp(16px,3.5vw,32px);
+}
+
+#limpiarDatos:hover {
+    background-color: #c82333;
+}
+
+#btnIrMapa { 
+    background-color: #6f42c1; /* Púrpura */
+    font-size: clamp(16px,3.5vw,32px);
+    height: 60px; /* Alineación vertical con los inputs */
+    line-height: 1;
+}
+#btnIrMapa:hover {
+    background-color: #5d35aa;
+}
+
+
+/* --- ESTILOS PARA LOS BOTONES DE ACCIÓN EN LA TABLA --- */
+
+.btn-accion {
+    font-size: 16px; 
+    padding: 8px 12px; 
+    margin: 0 5px 0 0; 
+}
+
+/* Botón Eliminar */
+.btn-eliminar {
+    background-color: #dc3545;
+    font-size: clamp(16px,3.5vw,32px);
+}
+.btn-eliminar:hover {
+    background-color: #c82333;
+}
+
+/* Botón Editar */
+.btn-editar {
+    background-color: #007bff;
+    font-size: clamp(16px,3.5vw,32px);
+    margin-bottom: 2px;
+}
+.btn-editar:hover {
+    background-color: #0056b3;
+}
+
+/* Botón Ver en Mapa */
+.btn-mapa {
+    background-color: #00c763; /* Verde para el mapa */
+    font-size: clamp(16px,3.5vw,32px);
+}
+.btn-mapa:hover {
+    background-color: #00aa56;
+}
+
+/* Botón Guardar Edición (Nuevo) */
+.btn-guardar-edicion {
+    background-color: #28a745;
+}
+.btn-guardar-edicion:hover {
+    background-color: #218838;
+}
+
+/* Estilo para los inputs que aparecen durante la edición */
+.input-edicion {
+    padding: 5px;
+    margin: 0;
+    width: 90%;
+    border: 1px solid #007bff;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* --- ESTILOS PARA GESTIÓN DE SCROLL Y CONTENIDO LARGO --- */
+
+.tabla-responsive {
+    overflow-x: auto;
+    width: 100%;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 20px; 
+    border: 3px solid #15d4ae; 
+    border-radius: 4px;
+}
+
+#tabla-muestras td {
+    max-width: 150px; 
+    white-space: normal; 
+    word-break: break-word; 
+}
+
+/* Aseguramos que la columna de acciones y mapa tenga suficiente espacio */
+#tabla-muestras th:last-child, 
+#tabla-muestras td:last-child {
+    min-width: 180px; 
+    max-width: none; 
+}
+#tabla-muestras th:nth-last-child(2), /* Columna Mapa */
+#tabla-muestras td:nth-last-child(2) {
+    min-width: 130px; 
+    max-width: none; 
+}
+
+/* --- CONTINUACIÓN DE ESTILOS DE TABLA --- */
+
+hr {
+    border: 0;
+    height: 1px;
+    /*background-color: #ddd;*/
+    margin: 30px 0;
+}
+
+table {
+    width: 100%;
+    min-width: 850px; /* Ajustamos el ancho mínimo para dar cabida a la nueva columna */
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    /*background-color: #f8f9fa;*/
+    color: rgb(108, 215, 103);
+    font-size: clamp(16px,3.5vw,32px);
+    font-weight: bold;
+}
+
+/*
+td {
+    background-color: #ffffff; 
+}*/
+
+.oculto {
+    display: none;
+}
+
+#mensaje-vacio {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    padding: 15px;
+    border: 1px dashed #ced4da;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 1024px){
+    .container {
+   
+        margin-left: 10%;
+        margin-right: 10%;
+
+}
+    
+
+}
